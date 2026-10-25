@@ -88,21 +88,19 @@ budget is a proposal: 2000 cents ($20) a month unless you give a reason for
 another figure in the task; the owner sets the final one. `desiredSkills`
 are keys from the company skill library
 (`GET /api/companies/$PAPERCLIP_COMPANY_ID/skills`); give each a reason.
-Then submit exactly the file the helper wrote:
-
-    curl -sS -X POST "$PAPERCLIP_API_URL/api/companies/$PAPERCLIP_COMPANY_ID/agent-hires" \
-      -H "Authorization: Bearer $PAPERCLIP_API_KEY" -H "Content-Type: application/json" \
-      --data @./hire-<name>.json
-
-The response must contain `approval` (the hire is `pending_approval`). If
-it does not, or the server refuses the payload, stop and report it; do not
-edit the payload to get past a refusal. Never set another `adapterType`,
-`runner`, `inheritRuntimeFrom`, a timer heartbeat, or `env`.
+Do not submit it yourself: Paperclip refuses a hire from an agent that
+carries the sandbox settings ("Agent keys cannot configure host-executed
+local adapter settings"), and editing them out would hire an unconfined
+agent. Leave `hire-<name>.json` and `souls/<name>/` in your workspace and
+say in the task, with their full paths, that the hire is ready for the
+owner to submit. The owner checks and submits it as the board
+(`edomoon-souls/scripts/submit-hire.mjs`), and it appears in the Approvals
+inbox.
 
 ## 6. After the owner decides
 
-Comment on the approval thread as `paperclip-create-agent` step 9 says,
-linking the source issue. The instructions were set at hire time
+When the owner has submitted the hire, comment on the approval thread as
+`paperclip-create-agent` step 9 says, linking the source issue. The instructions were set at hire time
 (`instructionsBundle`). After approval the owner commits the soul and runs
 `apply-sandbox.mjs` and `sync-soul.mjs`, which record the real souls commit;
 you do neither. If the owner refuses, record why in the source issue and do
@@ -112,7 +110,7 @@ not resubmit the same role unless the owner asks.
 
     <your signature>
     ## Hire request: <Title> (<name>, soul v1, draft)
-    - Approval: <link>   Pending agent: <link>
+    - Payload: <full path of hire-<name>.json>, ready for the owner to submit
     - Why now: ...
     - 30-day deliverable: ...
     - Reads / writes: ...

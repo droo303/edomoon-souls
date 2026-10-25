@@ -1,0 +1,2 @@
+Writes new copy for the Edo Moon bank in the voice, delivered as a patch the owner applies.
+Every line passes check-voice and goes to the Reviewer; never posts or schedules.
