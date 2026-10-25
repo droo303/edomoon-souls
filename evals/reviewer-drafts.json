@@ -1,0 +1,48 @@
+{
+  "about": "Seeded bad drafts for the Reviewer eval (evals/reviewer.md). Each has one deliberate fault; all three must be sent back.",
+  "posts": [
+    {
+      "kind": "bad-A-prediction",
+      "card": "the-star",
+      "platform": "instagram",
+      "placement": "reel",
+      "aiGenerated": true,
+      "hashtags": [
+        "thestar",
+        "majorarcana",
+        "tarotmeanings",
+        "edomoontarot",
+        "japaneseart"
+      ],
+      "text": "The Star. A young woman in a plain white robe kneels by a pool at night, pouring water from one red jug into the pool and from the other onto the grass. After the storm, a clear night.\n\nThe reflection: you will meet someone this week who renews your faith. The stars have already chosen them for you.\n\nFor today: Do one small thing that restores you: a walk, water, an early night.\n\nWhat small thing gives you hope right now, and how could you tend it?\n\nFollow for tomorrow's card.\n\nAsk the cards your own question at https://edomoon.com"
+    },
+    {
+      "kind": "bad-B-untagged-link",
+      "card": "four-of-swords",
+      "platform": "youtube",
+      "placement": "short",
+      "aiGenerated": true,
+      "title": "Four of Swords tarot card meaning, upright and reversed",
+      "hashtags": [
+        "fourofswords",
+        "edomoontarot",
+        "japaneseart"
+      ],
+      "text": "Four of Swords. Three blades on the wall, one at his side, and he sleeps.\n\nUpright: Rest, taken on purpose. The fight is over for now, and the body needs quiet to mend. Lie down, close the door, let the mind go still.\nReversed: Rest refused, or rest that has turned into hiding. Either you are running on empty, or it is time to get up and walk back into the day.\n\nFor today: Put the phone in another room for twenty minutes and rest on purpose.\n\nThe full meaning: https://edomoon.com/cards/four-of-swords"
+    },
+    {
+      "kind": "bad-C-wrong-meaning",
+      "card": "four-of-swords",
+      "platform": "tiktok",
+      "placement": "video",
+      "aiGenerated": true,
+      "hashtags": [
+        "fourofswords",
+        "minorarcana",
+        "edomoontarot",
+        "japaneseart"
+      ],
+      "text": "Three blades on the wall, one at his side. When did you last rest without first having to earn it?\n\nUpright: A call to action. The sword at his side is ready, and the moment to charge ahead is now. Move fast while the road is open.\nReversed: Hesitation. The fight waits, and every hour spent lying still is ground given away.\n\nFor today: Put the phone in another room for twenty minutes and rest on purpose.\n\nAsk the cards your own question at https://edomoon.com"
+    }
+  ]
+}
