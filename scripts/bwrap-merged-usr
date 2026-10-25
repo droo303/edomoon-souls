@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# bwrap for Paperclip's filesystemScope on merged-/usr Linux (Ubuntu).
+# Paperclip 2026.1023.0 passes "--symlink usr/bin /bin" and then also
+# "--ro-bind /bin /bin"; the bind fails because /bin is already a symlink
+# into a /usr that is not mounted yet, so no agent could start. This drops
+# only those redundant binds of /bin, /sbin, /lib and /lib64 when they are
+# symlinks on the host, and passes every other argument through unchanged.
+set -euo pipefail
+out=()
+while (($#)); do
+  if [[ ($1 == --ro-bind || $1 == --bind) && $# -ge 3 && $2 == "$3" ]] &&
+     [[ $2 == /bin || $2 == /sbin || $2 == /lib || $2 == /lib64 ]] && [[ -L $2 ]]; then
+    shift 3; continue
+  fi
+  out+=("$1"); shift
+done
+exec /usr/bin/bwrap "${out[@]}"

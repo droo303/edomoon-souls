@@ -1,0 +1,152 @@
+[
+ [
+  "deny",
+  "read ~/.ssh",
+  "ls /home/petr/.ssh"
+ ],
+ [
+  "deny",
+  "read ~/.config/oraculum",
+  "ls /home/petr/.config/oraculum"
+ ],
+ [
+  "deny",
+  "read project_nemesis/.env.local",
+  "cat /home/petr/Products/project_nemesis/.env.local"
+ ],
+ [
+  "deny",
+  "read my own ~/.claude credentials",
+  "ls /home/petr/.claude"
+ ],
+ [
+  "deny",
+  "see social/publer/*",
+  "ls /home/petr/Products/project_nemesis/social/publer"
+ ],
+ [
+  "deny",
+  "see scripts/deploy.sh",
+  "ls /home/petr/Products/project_nemesis/scripts/deploy.sh"
+ ],
+ [
+  "deny",
+  "Publer profile dir",
+  "ls /home/petr/.local/share/oraculum-publer"
+ ],
+ [
+  "deny",
+  "write into project_nemesis",
+  "touch /home/petr/Products/project_nemesis/docs/x"
+ ],
+ [
+  "deny",
+  "ssh-agent socket",
+  "test -S /run/user/1000/gcr/ssh"
+ ],
+ [
+  "deny",
+  "ssh to the server",
+  "ssh -o BatchMode=yes -o ConnectTimeout=5 root@81.2.244.74 true"
+ ],
+ [
+  "deny",
+  "git push (network to github)",
+  "git -C /home/petr/Products/project_nemesis push --dry-run origin main"
+ ],
+ [
+  "deny",
+  "https to github.com",
+  "curl -sS -m8 -o /dev/null https://github.com"
+ ],
+ [
+  "deny",
+  "edomoon.com on port 22 via proxy",
+  "curl -sSf -m8 -p http://edomoon.com:22/"
+ ],
+ [
+  "deny",
+  "Publer DevTools port 9333 on localhost",
+  "curl -sS -m5 --noproxy '*' http://127.0.0.1:9333/json/version"
+ ],
+ [
+  "deny",
+  "Publer DevTools via proxy",
+  "curl -sSf -m5 http://127.0.0.1:9333/json/version"
+ ],
+ [
+  "allow",
+  "write in own workspace",
+  "touch probe-file && rm probe-file"
+ ],
+ [
+  "allow",
+  "read voice brief",
+  "head -1 /home/petr/Products/project_nemesis/social/persona/edo-moon.md"
+ ],
+ [
+  "allow",
+  "run check-voice.mjs on samples",
+  "cd /home/petr/Products/project_nemesis && node social/check-voice.mjs social/persona/edo-moon.samples.json"
+ ],
+ [
+  "allow",
+  "run check-copy.mjs --theme ukiyo-e",
+  "cd /home/petr/Products/project_nemesis && node social/check-copy.mjs --theme ukiyo-e"
+ ],
+ [
+  "allow",
+  "git log (read-only)",
+  "git -C /home/petr/Products/project_nemesis log -1 --format=%h"
+ ],
+ [
+  "allow",
+  "reach api.anthropic.com",
+  "curl -sS -m8 -o /dev/null -w '%{http_code}' https://api.anthropic.com/"
+ ],
+ [
+  "allow",
+  "reach edomoon.com",
+  "curl -sS -m8 -o /dev/null -w '%{http_code}' https://edomoon.com/"
+ ],
+ [
+  "allow",
+  "reach Paperclip API",
+  "curl -sS -m8 http://127.0.0.1:3100/api/health -o /dev/null -w '%{http_code}'"
+ ],
+ [
+  "deny",
+  "CONNECT edomoon.com:22 (SSH)",
+  "curl -sS -m8 -p --http0.9 http://edomoon.com:22/ 2>&1 | grep -q SSH- && exit 0; exit 1"
+ ],
+ [
+  "deny",
+  "CONNECT edomoon.com:80",
+  "curl -sSf -m8 -p http://edomoon.com:80/"
+ ],
+ [
+  "deny",
+  "CONNECT api.anthropic.com:22",
+  "curl -sS -m8 -p --http0.9 http://api.anthropic.com:22/ 2>&1 | grep -q 'Connection Established' && exit 0; exit 1"
+ ],
+ [
+  "deny",
+  "see another deck's bank (dark-oracle)",
+  "ls /home/petr/Products/project_nemesis/social/dark-oracle"
+ ],
+ [
+  "deny",
+  "see souls scripts (sync tooling, .env)",
+  "ls /home/petr/Products/edomoon-souls/scripts"
+ ],
+ [
+  "deny",
+  "write into the souls repo",
+  "touch /home/petr/Products/edomoon-souls/souls/x"
+ ],
+ [
+  "allow",
+  "read the brand rules",
+  "head -1 /home/petr/Products/edomoon-souls/shared/brand-rules.md"
+ ]
+]

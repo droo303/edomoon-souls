@@ -1,0 +1,82 @@
+{
+  "about": "The sandbox every claude_local agent gets (scripts/lib/sandbox.mjs turns it into adapterConfig). Proven by sandbox-test/; rerun it after any change here or any Paperclip update.",
+  "adapter": {
+    "engine": "cli",
+    "dangerouslySkipPermissions": true,
+    "filesystemScope": "workspace",
+    "filesystemSandboxCommand": "/home/petr/.paperclip-agents/bin/bwrap-merged-usr",
+    "networkScope": "allowlist",
+    "networkAllowlist": [
+      "http://api.anthropic.com:443",
+      "http://platform.claude.com:443",
+      "http://edomoon.com:443"
+    ],
+    "maxTurnsPerRun": 60,
+    "timeoutSec": 1800,
+    "graceSec": 30,
+    "extraArgs": [
+      "--disallowedTools",
+      "WebSearch",
+      "Bash(ssh:*)",
+      "Bash(scp:*)",
+      "Bash(rsync:*)",
+      "Bash(git push:*)",
+      "Bash(*deploy.sh*)",
+      "Bash(*publer*)",
+      "Read(/home/petr/.ssh/**)",
+      "Read(/home/petr/.config/oraculum/**)",
+      "Read(**/.env*)"
+    ]
+  },
+  "workspacesRoot": "/home/petr/.paperclip-agents/workspaces",
+  "readOnly": [
+    {
+      "root": "/home/petr/Products/project_nemesis",
+      "exclude": [
+        ".env*",
+        ".next",
+        "node_modules",
+        "scripts",
+        "social"
+      ]
+    },
+    {
+      "root": "/home/petr/Products/project_nemesis/social",
+      "exclude": [
+        "publer",
+        "out",
+        "export",
+        "dark-oracle",
+        "glasshouse",
+        "art-deco",
+        "celestial-atlas"
+      ]
+    },
+    {
+      "root": "/home/petr/Products/edomoon-souls",
+      "include": [
+        "shared",
+        "souls",
+        "skills",
+        "evals",
+        "config",
+        "README.md"
+      ]
+    },
+    {
+      "root": "/home/petr/Products/edomoon-souls/scripts",
+      "include": [
+        "lib",
+        "hire.mjs"
+      ]
+    }
+  ],
+  "neverMount": [
+    "/home/petr/.ssh",
+    "/home/petr/.config/oraculum",
+    "/home/petr/.claude",
+    "/home/petr/.local/share/oraculum-publer",
+    "/home/petr/Products/project_nemesis/scripts",
+    "/home/petr/Products/project_nemesis/social/publer"
+  ]
+}
