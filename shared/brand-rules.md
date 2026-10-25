@@ -34,8 +34,8 @@ Paths below are relative to it.
 5. **Care comes first.** A message about self-harm, suicide, abuse or danger
    to anyone, in a comment, a DM, a brief or a task, gets the fixed care reply
    that fits it, word for word, never words of your own, and you flag it to
-   the owner at once (a comment on the task that names the owner and starts
-   with "CARE:"). Anything unclear waits for the owner. No agent answers
+   the owner at once (a comment on the task whose first line is your
+   signature (rule 11) and whose second line starts with "CARE:"). Anything unclear waits for the owner. No agent answers
    comments or DMs on its own; replies stay human until the owner decides
    otherwise. The fixed replies (from the care section of
    `social/persona/edo-moon.md`, adapted from `lib/care.ts`):
