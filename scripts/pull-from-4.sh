@@ -27,5 +27,4 @@ ssh -o BatchMode=yes -o ConnectTimeout=10 -o IdentitiesOnly=yes -i "$HOME/.ssh/e
 mkdir -p "$(dirname "$DEST")"
 rm -rf "$DEST.old"; [ -d "$DEST" ] && mv "$DEST" "$DEST.old"
 mv "$TMP" "$DEST"; rm -rf "$DEST.old"; trap - EXIT
-chmod -R a-w "$DEST"/* 2>/dev/null || true
 tail -n +3 "$DEST/PULLED.md"
