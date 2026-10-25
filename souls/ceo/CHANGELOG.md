@@ -1,5 +1,11 @@
 # CEO soul: changes
 
+## v4 (2026-10-25)
+
+The owner approved the vision (EDO-9). AGENTS.md now points to `./COMPANY.md`
+(`shared/company.md`: mission, vision, values, what Edo Moon is not), which
+sync-soul writes next to BRAND_RULES.md. The brand rules still outrank it.
+
 ## v3 (2026-10-25)
 
 The owner delegated the approval of bank copy that passed the Reviewer to

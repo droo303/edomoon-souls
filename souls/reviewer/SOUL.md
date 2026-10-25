@@ -1,7 +1,7 @@
 ---
 name: reviewer
 title: The Second Reader
-version: v2
+version: v3
 updated: 2026-10-25
 ---
 

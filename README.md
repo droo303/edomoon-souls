@@ -6,6 +6,7 @@ The personas ("souls") of the AI agents that market Edo Moon
 is `~/Products/project_nemesis/docs/plans/exec_plan_paperclip.md`.
 
     shared/brand-rules.md   the eleven hard rules; written inline into every agent's AGENTS.md
+    shared/company.md       mission, vision and values (owner-approved, EDO-9); written to every agent as COMPANY.md
     shared/voice.md         the voice in brief, pointing to project_nemesis/social/persona/edo-moon.md, and the checks
     souls/<role>/           SOUL.md (the persona, versioned), AGENTS.md (short template), CHANGELOG.md
     skills/                 company skills, imported into Paperclip's library
@@ -25,7 +26,7 @@ commit, which it quotes in every task comment.
 ## Syncing a soul into an agent
 
     git -c user.name="Petr Kožušník" -c user.email=38697731+droo303@users.noreply.github.com commit -am "souls(ceo): v2, ..."
-    node scripts/sync-soul.mjs souls/ceo <agent-id>            # writes AGENTS.md, SOUL.md, BRAND_RULES.md, VOICE.md
+    node scripts/sync-soul.mjs souls/ceo <agent-id>            # writes AGENTS.md, SOUL.md, COMPANY.md, BRAND_RULES.md, VOICE.md
     node scripts/sync-soul.mjs souls/ceo <agent-id> --check    # drift between the agent and the commit; writes nothing
 
 sync-soul refuses uncommitted changes in the soul or in `shared/`, reads

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Pushes a committed soul into a Paperclip agent's instruction files.
 //
-//   node scripts/sync-soul.mjs souls/ceo <agent-id>           write AGENTS.md, SOUL.md, BRAND_RULES.md, VOICE.md
+//   node scripts/sync-soul.mjs souls/ceo <agent-id>           write AGENTS.md, SOUL.md, COMPANY.md, BRAND_RULES.md, VOICE.md
 //   node scripts/sync-soul.mjs souls/ceo <agent-id> --check   report drift between the agent and the commit, write nothing
 //
 // It refuses to sync a soul or shared/ file with uncommitted changes, writes
@@ -56,7 +56,7 @@ if (/\{\{[A-Z_]+\}\}/.test(agents)) {
   console.error(`${rel}/AGENTS.md has a placeholder sync-soul does not know: ${agents.match(/\{\{[A-Z_]+\}\}/)[0]}`);
   process.exit(1);
 }
-const files = { 'AGENTS.md': agents, 'SOUL.md': soul, 'BRAND_RULES.md': read('shared/brand-rules.md'), 'VOICE.md': read('shared/voice.md') };
+const files = { 'AGENTS.md': agents, 'SOUL.md': soul, 'BRAND_RULES.md': read('shared/brand-rules.md'), 'VOICE.md': read('shared/voice.md'), 'COMPANY.md': read('shared/company.md') };
 
 // 3. Read, compare, write.
 async function readFile(p) {

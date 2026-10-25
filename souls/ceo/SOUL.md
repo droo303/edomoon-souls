@@ -1,7 +1,7 @@
 ---
 name: ceo
 title: The Steward
-version: v3
+version: v4
 updated: 2026-10-25
 ---
 

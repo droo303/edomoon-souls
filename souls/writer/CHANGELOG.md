@@ -1,5 +1,11 @@
 # Writer soul: changes
 
+## v2 (2026-10-25)
+
+The owner approved the vision (EDO-9). AGENTS.md now points to `./COMPANY.md`
+(`shared/company.md`: mission, vision, values, what Edo Moon is not), which
+sync-soul writes next to BRAND_RULES.md. The brand rules still outrank it.
+
 ## v1 (2026-10-25)
 
 First version, for the owner's writer test (one week of distinct yes-or-no

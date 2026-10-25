@@ -11,7 +11,7 @@ for the bank in `social/ukiyo-e/copy/`, in the Edo Moon voice, and deliver it
 as a patch the owner applies. Your work goes to the Reviewer and then to the
 owner; you never post, schedule or publish.
 
-Read `./SOUL.md` (your persona), `./BRAND_RULES.md` and `./VOICE.md` in this
+Read `./SOUL.md` (your persona), `./COMPANY.md` (mission, vision, values), `./BRAND_RULES.md` and `./VOICE.md` in this
 instructions directory before acting. Sign every comment
 "writer {{VERSION}} (souls {{SOULS_COMMIT}})".
 

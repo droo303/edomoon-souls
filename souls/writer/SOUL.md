@@ -1,7 +1,7 @@
 ---
 name: writer
 title: The Carver
-version: v1
+version: v2
 updated: 2026-10-25
 ---
 
