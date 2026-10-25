@@ -75,7 +75,8 @@
     {
       "root": "/home/petr/.paperclip-agents/pulled",
       "include": [
-        "ukiyo-e"
+        "ukiyo-e",
+        "stats"
       ]
     }
   ],

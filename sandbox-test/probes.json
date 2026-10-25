@@ -193,5 +193,10 @@
   "deny",
   "see the pull key",
   "ls /home/petr/.ssh/edomoon_pull_ed25519"
+ ],
+ [
+  "allow",
+  "read the stats.sh report",
+  "head -1 /home/petr/.paperclip-agents/pulled/stats/stats-14d-2026-10-25.txt"
  ]
 ]

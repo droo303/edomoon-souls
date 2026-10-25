@@ -17,7 +17,7 @@ PASS  allow write in own workspace                       exit=0
 PASS  allow read voice brief                             exit=0  # Edo Moon on social: the voice behind the account
 PASS  allow run check-voice.mjs on samples               exit=0  19 of 19 pass
 PASS  allow run check-copy.mjs --theme ukiyo-e           exit=0  ok   wheel-of-fortune.json
-PASS  allow git log (read-only)                          exit=0  e7eb9b6
+PASS  allow git log (read-only)                          exit=0  34fce1b
 PASS  allow reach api.anthropic.com                      exit=0  404
 PASS  allow reach edomoon.com                            exit=0  200
 PASS  allow reach Paperclip API                          exit=0  200
@@ -37,4 +37,5 @@ PASS  deny  Paperclip database                           exit=2  ls: cannot acce
 PASS  allow read the pulled metrics report               exit=0  # Edo Moon: how the posts are doing
 PASS  deny  write into the pulled copy                   exit=1  touch: cannot touch '/home/petr/.paperclip-agents/pulled/ukiyo-e/x': Read-only file system
 PASS  deny  see the pull key                             exit=2  ls: cannot access '/home/petr/.ssh/edomoon_pull_ed25519': No such file or directory
+PASS  allow read the stats.sh report                     exit=0  # scripts/stats.sh 14, run 2026-10-25T07:29Z on the ThinkPad by Claude Code for the owner 
 all probes pass
