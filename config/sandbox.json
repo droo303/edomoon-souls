@@ -25,6 +25,7 @@
       "Bash(*publer*)",
       "Read(/home/petr/.ssh/**)",
       "Read(/home/petr/.config/oraculum/**)",
+      "Read(/home/petr/.config/edomoon/**)",
       "Read(**/.env*)"
     ]
   },
@@ -78,6 +79,12 @@
     "/home/petr/.claude",
     "/home/petr/.local/share/oraculum-publer",
     "/home/petr/Products/project_nemesis/scripts",
-    "/home/petr/Products/project_nemesis/social/publer"
+    "/home/petr/Products/project_nemesis/social/publer",
+    "/home/petr/.config/edomoon",
+    "/home/petr/.local/share/edomoon-publer",
+    "/home/petr/.local/share/edomoon-deploy",
+    "/home/petr/.local/share/oraculum-deploy",
+    "/home/petr/.paperclip/instances/default/secrets",
+    "/home/petr/.paperclip/instances/default/db"
   ]
 }

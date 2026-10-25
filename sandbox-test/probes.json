@@ -158,5 +158,25 @@
   "allow",
   "run hire.mjs helper (read-only)",
   "node /home/petr/Products/edomoon-souls/scripts/hire.mjs 2>&1 | grep -q 'missing --soul'"
+ ],
+ [
+  "deny",
+  "read ~/.config/edomoon (renamed token dir)",
+  "ls /home/petr/.config/edomoon"
+ ],
+ [
+  "deny",
+  "Publer profile dir (renamed edomoon-publer)",
+  "ls /home/petr/.local/share/edomoon-publer"
+ ],
+ [
+  "deny",
+  "Paperclip secrets key",
+  "ls /home/petr/.paperclip/instances/default/secrets"
+ ],
+ [
+  "deny",
+  "Paperclip database",
+  "ls /home/petr/.paperclip/instances/default/db"
  ]
 ]
