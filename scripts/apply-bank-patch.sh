@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # Applies an approved bank-copy patch on the ThinkPad (the machine whose cron
 # builds and queues the posts), the way EDO-5 was applied on 2026-10-25:
-# refuses while a social job runs or the repository has changes, refuses a
+# refuses while a social job runs or the copy bank has changes, refuses a
 # patch that touches anything outside social/<theme>/copy/, applies it, runs
 # check-copy and the social tests (tests/social.test.ts holds the voice rules
-# for every built bank), rebuilds the posts, and commits (never pushes). queue-day.sh renders each day's posts
+# for every built bank), rebuilds the posts, and commits the copy only (never
+# pushes): the post records stay uncommitted next to the queue run's own
+# changes, as the ThinkPad keeps them. queue-day.sh renders each day's posts
 # before packing them, so nothing else is needed.
 #
 #   scripts/apply-bank-patch.sh <copy.patch> EDO-<n> "<one-line summary>"
@@ -22,7 +24,7 @@ bad=$(grep -E '^(\+\+\+|---) ' "$PATCH" | awk '{print $2}' | grep -v '/dev/null'
 FILES=$(grep -E '^\+\+\+ ' "$PATCH" | awk '{print $2}' | sed -E 's#.*/(social/[a-z-]+/copy/.*)#\1#' | sort -u)
 THEME=$(echo "$FILES" | head -1 | cut -d/ -f2)
 
-ssh_ "pgrep -f '[q]ueue-day|[r]ender[.]mjs|[b]uild-posts|[p]lan[.]mjs|[m]etrics[.]mjs' >/dev/null && { echo 'refused: a social job is running'; exit 1; }; cd $REPO && [ -z \"\$(git status --porcelain)\" ] || { echo 'refused: the repository has uncommitted changes'; git status --short; exit 1; }"
+ssh_ "pgrep -f '[q]ueue-day|[r]ender[.]mjs|[b]uild-posts|[p]lan[.]mjs|[m]etrics[.]mjs' >/dev/null && { echo 'refused: a social job is running'; exit 1; }; cd $REPO && [ -z \"\$(git status --porcelain -- social/*/copy)\" ] || { echo 'refused: the copy bank has uncommitted changes'; git status --short -- social/*/copy; exit 1; }"
 # Rewrite the patch's paths to repo-relative ones, then apply with -p0 in the repo.
 sed -E 's#^(\+\+\+|---) [^ ]*/(social/[a-z-]+/copy/[^	 ]*).*#\1 \2#' "$PATCH" | ssh_ "cd $REPO && patch -p0 -s --forward --no-backup-if-mismatch -r -"
-ssh_ "cd $REPO && node social/check-copy.mjs --theme $THEME >/dev/null && echo 'check-copy: ok' && node social/build-posts.mjs --theme $THEME | tail -1 && timeout 300 npx vitest run tests/social.test.ts 2>&1 | grep -E 'Tests|failed' && git add social/$THEME && git status --short && git -c 'user.name=Petr Kožušník' -c user.email=38697731+droo303@users.noreply.github.com commit -q -m \"feat(social): $SUMMARY ($ISSUE)\" -m \"Approved in Paperclip $ISSUE; applied with edomoon-souls/scripts/apply-bank-patch.sh.\" && git log --oneline -1"
+ssh_ "cd $REPO && node social/check-copy.mjs --theme $THEME >/dev/null && echo 'check-copy: ok' && node social/build-posts.mjs --theme $THEME | tail -1 && timeout 300 npx vitest run tests/social.test.ts 2>&1 | grep -E 'Tests|failed' && git add social/$THEME/copy && git -c 'user.name=Petr Kožušník' -c user.email=38697731+droo303@users.noreply.github.com commit -q -m \"feat(social): $SUMMARY ($ISSUE)\" -m \"Approved in Paperclip $ISSUE; applied with edomoon-souls/scripts/apply-bank-patch.sh.\" && git log --oneline -1"
