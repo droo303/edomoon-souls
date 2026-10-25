@@ -8,6 +8,7 @@
 //     --soul ./souls/analyst --name analyst --role researcher --title "Analyst" \
 //     --capabilities ./souls/analyst/CAPABILITIES.txt --reports-to <ceo-id> \
 //     --source-issue <issue-id> --budget 2000 --skills five-hat-review \
+//     [--can-create-agents]   (the CEO only) \
 //     --out ./hire-analyst.json
 //
 // The soul folder needs SOUL.md (with "version:" in its frontmatter) and
@@ -70,6 +71,9 @@ const body = {
       'VOICE.md': readFileSync(path.join(ROOT, 'shared', 'voice.md'), 'utf8'),
     },
   },
+  // Only the CEO hires; no agent adds skills to the library (skills are
+  // instructions, and souls change only through this repository).
+  permissions: { canCreateAgents: argv.includes('--can-create-agents'), canCreateSkills: false },
   budgetMonthlyCents: budget,
   sourceIssueId: opt('source-issue', null),
 };

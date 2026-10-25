@@ -57,5 +57,7 @@ export function sandboxProblems(agent, { instructionsRoot = null } = {}) {
   const envKeys = Object.keys(c.env ?? {});
   if (envKeys.length) p.push(`adapter env sets ${envKeys.join(', ')}: review by hand`);
   if (agent.runtimeConfig?.heartbeat?.enabled) p.push('timer heartbeat is on');
+  if (agent.permissions?.canCreateSkills !== false) p.push('canCreateSkills is not false');
+  if (agent.permissions?.canCreateAgents !== false && agent.role !== 'ceo') p.push(`canCreateAgents is not false for role ${agent.role}`);
   return p;
 }
