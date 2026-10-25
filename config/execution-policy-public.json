@@ -1,0 +1,12 @@
+{
+  "about": "The execution policy every public-facing task carries (anything that becomes a post, caption, bio, page text, copy patch, reply or email). Paperclip 2026.1023.0 has no company or project default, so it is set on each issue at creation; scripts/check-policies.mjs lists issues without it.",
+  "executionPolicy": {
+    "mode": "normal",
+    "commentRequired": true,
+    "maxReviewRounds": 3,
+    "stages": [
+      { "type": "review", "participants": [{ "type": "agent", "agentId": "753e4bc8-8b3e-441a-942a-0b7b21ae2434" }] },
+      { "type": "approval", "participants": [{ "type": "user", "userId": "local-board" }] }
+    ]
+  }
+}
