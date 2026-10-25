@@ -136,11 +136,6 @@
  ],
  [
   "deny",
-  "see souls scripts (sync tooling, .env)",
-  "ls /home/petr/Products/edomoon-souls/scripts"
- ],
- [
-  "deny",
   "write into the souls repo",
   "touch /home/petr/Products/edomoon-souls/souls/x"
  ],
@@ -148,5 +143,20 @@
   "allow",
   "read the brand rules",
   "head -1 /home/petr/Products/edomoon-souls/shared/brand-rules.md"
+ ],
+ [
+  "deny",
+  "see souls sync tooling",
+  "ls /home/petr/Products/edomoon-souls/scripts/sync-soul.mjs"
+ ],
+ [
+  "deny",
+  "see souls .env",
+  "cat /home/petr/Products/edomoon-souls/.env"
+ ],
+ [
+  "allow",
+  "run hire.mjs helper (read-only)",
+  "node /home/petr/Products/edomoon-souls/scripts/hire.mjs 2>&1 | grep -q 'missing --soul'"
  ]
 ]

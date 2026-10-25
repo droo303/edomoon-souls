@@ -25,7 +25,9 @@ PASS  deny  CONNECT edomoon.com:22 (SSH)                 exit=1
 PASS  deny  CONNECT edomoon.com:80                       exit=22  curl: (22) The requested URL returned error: 403
 PASS  deny  CONNECT api.anthropic.com:22                 exit=1  
 PASS  deny  see another deck's bank (dark-oracle)        exit=2  ls: cannot access '/home/petr/Products/project_nemesis/social/dark-oracle': No such file o
-PASS  deny  see souls scripts (sync tooling, .env)       exit=2  ls: cannot access '/home/petr/Products/edomoon-souls/scripts': No such file or directory
 PASS  deny  write into the souls repo                    exit=1  touch: cannot touch '/home/petr/Products/edomoon-souls/souls/x': Read-only file system
 PASS  allow read the brand rules                         exit=0  # Edo Moon: hard rules for every agent
+PASS  deny  see souls sync tooling                       exit=2  ls: cannot access '/home/petr/Products/edomoon-souls/scripts/sync-soul.mjs': No such file 
+PASS  deny  see souls .env                               exit=1  cat: /home/petr/Products/edomoon-souls/.env: No such file or directory
+PASS  allow run hire.mjs helper (read-only)              exit=0  
 all probes pass
