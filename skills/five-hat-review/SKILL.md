@@ -53,12 +53,17 @@ specific word, number or emoji in the comments; luck for likes or follows).
 
 A clear reason to visit, and the right Edo Moon page for it (`/today`,
 `/yes-or-no`, `/pick-a-card`, `/birth-card`, `/cards/<id>`, `/journal`,
-`/play`, or home). Instagram and TikTok captions end on
-`https://edomoon.com`; YouTube descriptions carry the tagged link to the
-post's own page. Every link carries `utm_source` (one of `SOURCE_TAGS` in
-`lib/site-stats.ts`), `utm_medium=social`, `utm_campaign` (one of
-`CAMPAIGNS` there) and `utm_content` (a card id, a pick-a-card set id or
-`set-NN`), or the site throws the campaign away.
+`/play`, or home). Instagram and TikTok captions end on the bare
+`https://edomoon.com`, with no tags: links in those captions cannot be
+clicked, so this is the project's rule and never a finding. Tags are
+required where a link can be clicked: a YouTube description (and its link
+field) carries the tagged link to the post's own page, as do pins and bio
+links (`utm_campaign=bio&utm_content=profile`). A clickable link carries
+`utm_source` (one of `SOURCE_TAGS` in `lib/site-stats.ts`),
+`utm_medium=social`, `utm_campaign` (one of `CAMPAIGNS` there) and
+`utm_content` (a card id, a pick-a-card set id or `set-NN`), or the site
+throws the campaign away. Compare with the variants `link()` builds in
+`social/build-posts.mjs` and a real post in `social/ukiyo-e/posts/`.
 
 ## 5. Fact check
 
@@ -71,8 +76,8 @@ carries its caveat. A number you cannot trace is a P0.
 ## Severity
 
 - **P0** blocks: a broken hard rule, a prediction, missing disclosure or
-  label, a care miss, a wrong card meaning, an unsourced number, a link the
-  site cannot count.
+  label, a care miss, a wrong card meaning, an unsourced number, a
+  clickable link the site cannot count.
 - **P1** should be fixed: off-voice wording, a wrong hashtag count, a weak or
   missing hook, the wrong page.
 - **P2** is a suggestion.

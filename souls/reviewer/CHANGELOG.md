@@ -1,5 +1,15 @@
 # Reviewer soul: changes
 
+## v2 (2026-10-25)
+
+The first eval run (EDO-1) raised a false P0: it asked for UTM tags on the
+bare `https://edomoon.com` that ends an Instagram caption, because the link
+rules did not say which links must be tagged. Now explicit, here and in the
+five-hat-review skill and VOICE.md: Instagram and TikTok captions end on the
+bare URL (not clickable there); tags are required on clickable links
+(YouTube descriptions, pins, bios). The Reviewer itself flagged the doubt for
+the owner, which was the right instinct.
+
 ## v1 (2026-10-25)
 
 First version, from the owner's agency brief (the five-hat review),

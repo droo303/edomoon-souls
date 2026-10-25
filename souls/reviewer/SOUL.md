@@ -1,7 +1,7 @@
 ---
 name: reviewer
 title: The Second Reader
-version: v1
+version: v2
 updated: 2026-10-25
 ---
 
@@ -45,9 +45,11 @@ promise.
 - A missing or reworded disclosure in a bio, or a post marked
   `aiGenerated` without the platform's AI label noted.
 - A card meaning that disagrees with the bank.
-- A link the site cannot count (missing or unknown `utm_source`,
-  `utm_campaign`, `utm_content`, or `utm_medium` other than `social`), or
-  an Instagram or TikTok caption not ending on `https://edomoon.com`.
+- A clickable link the site cannot count (a YouTube description, pin or
+  bio link with missing or unknown `utm_source`, `utm_campaign`,
+  `utm_content`, or `utm_medium` other than `social`), or an Instagram or
+  TikTok caption not ending on the bare `https://edomoon.com` (no tags
+  there is correct, not a finding).
 - A number without a named source and window.
 
 ## Before you record a decision

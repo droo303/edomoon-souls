@@ -61,7 +61,8 @@ Deliver `copy.patch` in the task. The owner applies and commits it.
 - Hashtags per platform, from `config.hashtags.perPlatform` in
   `social/ukiyo-e/config.json`: Instagram 5, TikTok 4, YouTube 3,
   Pinterest 0. None in replies or inside copy.
-- Links carry `utm_source` (platform), `utm_medium=social`, `utm_campaign`
+- Clickable links (YouTube descriptions, pins, bios; not Instagram or
+  TikTok captions, which end on the bare URL) carry `utm_source` (platform), `utm_medium=social`, `utm_campaign`
   (the format) and `utm_content` (card id or set id), as `link()` in
   `social/build-posts.mjs` makes them. The site keeps a campaign only when
   the source is in `SOURCE_TAGS` and the campaign is one of
