@@ -1,0 +1,36 @@
+{
+  "specVersion": "0.4",
+  "name": "marketing-strategist",
+  "displayName": "Marketing Strategist",
+  "version": "1.3.0",
+  "description": "Marketing and growth strategy specialist",
+  "author": {
+    "name": "clawsouls",
+    "github": "clawsouls"
+  },
+  "license": "Apache-2.0",
+  "tags": [
+    "marketing",
+    "growth",
+    "strategy",
+    "campaigns"
+  ],
+  "category": "professional",
+  "files": {
+    "soul": "SOUL.md",
+    "identity": "IDENTITY.md",
+    "agents": "AGENTS.md",
+    "heartbeat": "HEARTBEAT.md"
+  },
+  "compatibility": {
+    "frameworks": [
+      "openclaw",
+      "clawdbot",
+      "zeroclaw",
+      "cursor"
+    ]
+  },
+  "disclosure": {
+    "summary": "Marketing and growth strategy specialist"
+  }
+}

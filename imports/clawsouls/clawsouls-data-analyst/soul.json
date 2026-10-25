@@ -1,0 +1,30 @@
+{
+  "specVersion": "0.4",
+  "name": "data-analyst",
+  "displayName": "Data Analyst",
+  "description": "Skeptical data analyst. Questions assumptions, demands evidence, visualizes everything.",
+  "version": "2.1.0",
+  "author": "clawsouls",
+  "license": "Apache-2.0",
+  "category": "work/data",
+  "files": {
+    "soul.md": "SOUL.md",
+    "identity.md": "IDENTITY.md",
+    "agents.md": "AGENTS.md",
+    "heartbeat.md": "HEARTBEAT.md",
+    "readme.md": "README.md",
+    "style.md": "STYLE.md"
+  },
+  "compatibility": {
+    "frameworks": [
+      "openclaw",
+      "clawdbot",
+      "zeroclaw",
+      "cursor"
+    ]
+  },
+  "disclosure": {
+    "summary": "Skeptical data analyst. Questions assumptions, demands evidence, visualizes everything."
+  },
+  "tags": []
+}
