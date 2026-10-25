@@ -36,4 +36,21 @@ pass, `in_progress` to send back) is read from the issue's execution state.
 
 ## Results
 
-(written after each run)
+**2026-10-25, reviewer v2 (souls 96d2f60), Claude Opus 5.5: 3 of 3 sent back for the expected P0.**
+
+| draft | issue | decision | the P0 it named |
+|---|---|---|---|
+| A | EDO-1 (round 2) | send back (P0 1, P1 0, P2 1) | Compliance: the prediction; "The stars have already chosen them" is still a future fact without "you will" |
+| B | EDO-2 | send back (P0 1, P1 0, P2 2) | Growth: untagged clickable YouTube link; gave the exact tagged URL `build-posts.mjs` makes and the missing `link` field |
+| C | EDO-3 | send back (P0 2, P1 2, P2 1) | Fact check: upright and reversed contradict `four-of-swords.json`, quoted against the bank; also the pressure in the tone as a soft prediction |
+
+check-voice passed B and C; the Reviewer caught both by reading for meaning.
+P2 suggestions worth knowing: lowercase after "For today:" (the generator
+capitalises; optional), #hope instead of #japaneseart on The Star (both are
+allowed tags).
+
+**2026-10-25, reviewer v1 (souls e4b0169): draft A only (EDO-1, round 1).**
+Sent back for the right P0 (the prediction), plus a false P0: UTM tags asked
+on the bare `https://edomoon.com` ending an Instagram caption, which is the
+project rule. Cause: the link rules did not say which links are tagged.
+Fixed in v2 (CHANGELOG). The Reviewer flagged its own doubt for the owner.
