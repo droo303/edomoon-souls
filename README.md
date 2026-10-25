@@ -47,6 +47,17 @@ then
     node scripts/apply-sandbox.mjs <agent-id> <workspace-name>   # also mounts its instructions folder so it can read SOUL.md
     node scripts/sync-soul.mjs souls/<role> <agent-id>
 
+## Approvals
+
+Brand rule 7 (owner, 2026-10-25): bank copy (a patch to
+`social/ukiyo-e/copy/` only) is approved by the CEO after the Reviewer
+passes it; everything else public is approved by the owner. Tasks carry
+`config/execution-policy-bank-copy.json` or `config/execution-policy-public.json`
+(`scripts/check-policies.mjs` lists those that carry neither).
+
+    node scripts/approved.mjs [days]                                    # what was approved, by whom
+    scripts/apply-bank-patch.sh <copy.patch> EDO-<n> "<summary>"        # apply an approved patch on the ThinkPad
+
 ## The sandbox
 
 `config/sandbox.json` holds rules, not a frozen list: which folders agents

@@ -13,6 +13,7 @@ import { api } from './lib/api.mjs';
 
 const want = JSON.parse(readFileSync(path.join(ROOT, 'config', 'execution-policy-public.json'), 'utf8')).executionPolicy;
 const reviewer = want.stages.find((s) => s.type === 'review').participants[0].agentId;
+const ceo = JSON.parse(readFileSync(path.join(ROOT, 'config', 'execution-policy-bank-copy.json'), 'utf8')).executionPolicy.stages.find((s) => s.type === 'approval').participants[0].agentId;
 const company = readFileSync('/home/petr/.paperclip-agents/company-id', 'utf8').trim();
 const r = await api('GET', `/companies/${company}/issues?limit=200`);
 const issues = Array.isArray(r.json) ? r.json : r.json?.items ?? r.json?.issues ?? [];
@@ -23,7 +24,8 @@ for (const i of issues) {
   const full = (await api('GET', `/issues/${i.id}`)).json ?? i;
   const stages = full.executionPolicy?.stages ?? [];
   const hasReview = stages.some((s) => s.type === 'review' && s.participants?.some((p) => p.agentId === reviewer));
-  const hasApproval = stages.some((s) => s.type === 'approval' && s.participants?.some((p) => p.userId === 'local-board'));
+  // The owner approves public work; the CEO approves bank copy (brand rule 7).
+  const hasApproval = stages.some((s) => s.type === 'approval' && s.participants?.some((p) => p.userId === 'local-board' || p.agentId === ceo));
   if (hasReview && hasApproval) continue;
   missing++;
   console.log(`${i.identifier}  ${i.status.padEnd(12)} review:${hasReview ? 'yes' : 'NO '} approval:${hasApproval ? 'yes' : 'NO '}  ${i.title}`);

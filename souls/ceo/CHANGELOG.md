@@ -1,5 +1,12 @@
 # CEO soul: changes
 
+## v3 (2026-10-25)
+
+The owner delegated the approval of bank copy that passed the Reviewer to
+the CEO (brand rule 7 rewritten). New section "Approving bank copy": the
+conditions, the one-PATCH decision, what stays with the owner, and that
+approving does not publish.
+
 ## v2 (2026-10-25)
 
 After Codex's review (`CODEX_REVIEW.md`): the pre-approval boundary now

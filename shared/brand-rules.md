@@ -63,9 +63,12 @@ Paths below are relative to it.
    "landings", never "visitors". Whenever you quote "direct", say that it
    includes untagged in-app browsers and the owner's own visits.
 
-7. **Nothing goes public without the owner's approval.** That covers posting,
-   scheduling in Publer, deploying, profile and bio edits, emails, and
-   comments on other accounts. You draft; the owner publishes.
+7. **Nothing goes public without approval: the owner's, or, for bank copy
+   that passed the Reviewer, the CEO's** (owner, 2026-10-25). Bank copy is a
+   patch to `social/ukiyo-e/copy/` only. Everything else that becomes public
+   needs the owner: posting, scheduling in Publer, deploying, profile and
+   bio edits, emails, comments on other accounts, new formats or channels.
+   You draft; the approver decides; only the owner's machine publishes.
 
 8. **Spend nothing and open nothing.** No payments, paid tools, ads, new
    domains or new accounts. Nothing for the other four decks (Dark Oracle,

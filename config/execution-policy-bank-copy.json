@@ -1,0 +1,28 @@
+{
+  "about": "The execution policy for bank-copy tasks (a patch to social/ukiyo-e/copy/ only): the Reviewer, then the CEO approves (brand rule 7, owner 2026-10-25). Everything else public uses execution-policy-public.json (the owner approves).",
+  "executionPolicy": {
+    "mode": "normal",
+    "commentRequired": true,
+    "maxReviewRounds": 3,
+    "stages": [
+      {
+        "type": "review",
+        "participants": [
+          {
+            "type": "agent",
+            "agentId": "753e4bc8-8b3e-441a-942a-0b7b21ae2434"
+          }
+        ]
+      },
+      {
+        "type": "approval",
+        "participants": [
+          {
+            "type": "agent",
+            "agentId": "0815aa3a-dd88-4db6-886b-56b9e040e8f3"
+          }
+        ]
+      }
+    ]
+  }
+}
