@@ -1,5 +1,13 @@
 # Reviewer soul: changes
 
+## v4 (2026-10-25)
+
+Brand rule 3 revised (owner's delegation, "do what is right for the
+project"): the AI label goes on wherever the posting tool can set it; Publer
+can set it nowhere, so no platform that requires it is posted to through
+Publer, and a platform's own label is never appealed or worked around.
+COMPANY.md's V2 gap note says the same.
+
 ## v3 (2026-10-25)
 
 The owner approved the vision (EDO-9). AGENTS.md now points to `./COMPANY.md`

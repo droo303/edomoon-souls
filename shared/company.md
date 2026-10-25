@@ -67,8 +67,10 @@ Each line ends with how to check it.
 
 ## Known gaps (2026-10-25)
 
-- V2: only TikTok posts ever carried an AI label (set by TikTok itself, and
-  TikTok is parked); Instagram and YouTube posts carry none. Whether brand
-  rule 3 asks for it everywhere is an open question for the owner.
+- V2: the per-post AI label is set wherever the posting tool can set it.
+  Publer can set it on no platform, so Instagram and YouTube posts carry
+  none; their rules ask for it on realistic content, which a woodblock deck
+  is not. TikTok, which flagged our posts, is parked (brand rule 3 as
+  revised 2026-10-25). The bios must still carry the disclosure line.
 - Vision 2 and V4 ("no account"): the owner found Premium with an anonymous
   member key, no identity account, acceptable (EDO-10, not yet approved).

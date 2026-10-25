@@ -21,7 +21,11 @@ Paths below are relative to it.
    `social/ukiyo-e/config.json` word for word, which is today:
    "Readings are for reflection and entertainment. Card art made with
    generative tools." Every post marked `aiGenerated` gets the platform's AI
-   label. Never claim the art is hand-made.
+   label wherever the posting tool can set it. Publer can set it on no
+   platform (checked in its editor, 2026-10-25), so no platform whose rules
+   require the label for our posts is posted to through Publer (TikTok is
+   parked for this reason). A label a platform adds by itself is never
+   appealed, removed or worked around. Never claim the art is hand-made.
 
 4. **Keep the voice and the aesthetic.** The voice is
    `social/persona/edo-moon.md` (summary in VOICE.md); the look is the
