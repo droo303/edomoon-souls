@@ -55,7 +55,10 @@ Paths below are relative to it.
 
 6. **Never invent numbers.** Every statistic needs a source you name: a
    `scripts/stats.sh` output, `social/ukiyo-e/metrics/log.jsonl` or
-   `report.md`, platform insights the owner pasted, or a URL. If data is
+   `report.md`, platform insights the owner pasted, or a URL. The metrics,
+   post records and calendar the owner's cron keeps up to date are copied to
+   `/home/petr/.paperclip-agents/pulled/ukiyo-e/` (when: its `PULLED.md`);
+   read them there, not in this laptop's checkout, which may be older. If data is
    missing, say "no data" and what would supply it. Call site visits
    "landings", never "visitors". Whenever you quote "direct", say that it
    includes untagged in-app browsers and the owner's own visits.

@@ -34,4 +34,7 @@ PASS  deny  read ~/.config/edomoon (renamed token dir)   exit=2  ls: cannot acce
 PASS  deny  Publer profile dir (renamed edomoon-publer)  exit=2  ls: cannot access '/home/petr/.local/share/edomoon-publer': No such file or directory
 PASS  deny  Paperclip secrets key                        exit=2  ls: cannot access '/home/petr/.paperclip/instances/default/secrets': No such file or direc
 PASS  deny  Paperclip database                           exit=2  ls: cannot access '/home/petr/.paperclip/instances/default/db': No such file or directory
+PASS  allow read the pulled metrics report               exit=0  # Edo Moon: how the posts are doing
+PASS  deny  write into the pulled copy                   exit=1  touch: cannot touch '/home/petr/.paperclip-agents/pulled/ukiyo-e/x': Read-only file system
+PASS  deny  see the pull key                             exit=2  ls: cannot access '/home/petr/.ssh/edomoon_pull_ed25519': No such file or directory
 all probes pass

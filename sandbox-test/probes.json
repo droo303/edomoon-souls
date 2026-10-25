@@ -178,5 +178,20 @@
   "deny",
   "Paperclip database",
   "ls /home/petr/.paperclip/instances/default/db"
+ ],
+ [
+  "allow",
+  "read the pulled metrics report",
+  "head -1 /home/petr/.paperclip-agents/pulled/ukiyo-e/metrics/report.md"
+ ],
+ [
+  "deny",
+  "write into the pulled copy",
+  "touch /home/petr/.paperclip-agents/pulled/ukiyo-e/x"
+ ],
+ [
+  "deny",
+  "see the pull key",
+  "ls /home/petr/.ssh/edomoon_pull_ed25519"
  ]
 ]

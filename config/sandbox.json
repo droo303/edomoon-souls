@@ -71,6 +71,12 @@
         "lib",
         "hire.mjs"
       ]
+    },
+    {
+      "root": "/home/petr/.paperclip-agents/pulled",
+      "include": [
+        "ukiyo-e"
+      ]
     }
   ],
   "neverMount": [
