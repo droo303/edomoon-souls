@@ -60,6 +60,7 @@
         "skills",
         "evals",
         "config",
+        "imports",
         "README.md"
       ]
     },
