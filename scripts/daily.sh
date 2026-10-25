@@ -17,7 +17,7 @@ out=$(ssh -o BatchMode=yes -o ConnectTimeout=15 -o IdentitiesOnly=yes -i "$HOME/
   'cd ~/Products/edomoon && bash scripts/stats.sh 7' 2>&1) && {
   if echo "$out" | grep -qE '81\.2\.244|root@'; then echo "stats: output names the server, not saved"; else
     { echo "# scripts/stats.sh 7, run $(date -u +%Y-%m-%dT%H:%MZ) on the ThinkPad by daily.sh (read-only)"; echo; echo "$out"; } > "$P/stats/stats-7d-$STAMP.txt"
-    cp "$P/stats/stats-7d-$DAY.txt" "$P/stats/stats-7d-latest.txt"; echo "stats: saved stats-7d-$DAY.txt"; fi; } || echo "stats: not read (ThinkPad off or key refused)"
+    cp "$P/stats/stats-7d-$STAMP.txt" "$P/stats/stats-7d-latest.txt"; echo "stats: saved stats-7d-$STAMP.txt"; fi; } || echo "stats: not read (ThinkPad off or key refused)"
 node scripts/wake-stuck-reviews.mjs
 R=$(cat "$HOME/.paperclip-agents/routine-ceo-daily.json")
 rid=$(echo "$R" | python3 -c 'import json,sys;print(json.load(sys.stdin)["routineId"])'); tid=$(echo "$R" | python3 -c 'import json,sys;print(json.load(sys.stdin)["triggerId"])')
