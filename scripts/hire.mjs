@@ -61,7 +61,7 @@ const body = {
   adapterType: 'claude_local',
   runner: 'legacy',
   adapterConfig: sandboxAdapterConfig({ name, model: opt('model') }),
-  runtimeConfig: { heartbeat: { enabled: false, wakeOnDemand: true } },
+  runtimeConfig: { heartbeat: { enabled: false, wakeOnDemand: true, maxConcurrentRuns: 1 } },
   instructionsBundle: {
     entryFile: 'AGENTS.md',
     files: {

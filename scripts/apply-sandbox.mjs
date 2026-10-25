@@ -15,7 +15,8 @@ if (a.status !== 200) { console.error(`HTTP ${a.status} ${a.text}`); process.exi
 if (a.json.adapterType !== 'claude_local') { console.error(`${a.json.name} is ${a.json.adapterType}; only claude_local agents get this sandbox`); process.exit(1); }
 const root = (await api('GET', `/agents/${id}/instructions-bundle`)).json?.rootPath ?? null;
 const adapterConfig = { ...a.json.adapterConfig, ...sandboxAdapterConfig({ name, instructionsRoot: root, model: a.json.adapterConfig?.model }) };
-const r = await api('PATCH', `/agents/${id}`, { adapterConfig, replaceAdapterConfig: true });
+const runtimeConfig = { ...a.json.runtimeConfig, heartbeat: { ...a.json.runtimeConfig?.heartbeat, enabled: false, wakeOnDemand: true, maxConcurrentRuns: 1 } };
+const r = await api('PATCH', `/agents/${id}`, { adapterConfig, replaceAdapterConfig: true, runtimeConfig });
 if (r.status !== 200) { console.error(`PATCH: HTTP ${r.status} ${r.text}`); process.exit(1); }
 const problems = sandboxProblems(r.json, { instructionsRoot: root });
 console.log(problems.length ? problems.map((p) => `PROBLEM  ${p}`).join('\n') : `${r.json.name}: sandbox applied, instructions folder ${root ?? '(none)'} mounted read-only`);
