@@ -5,7 +5,8 @@ laptop at http://127.0.0.1:3100). Start agency sessions here; product work
 starts in `~/Products/project_nemesis`. Read first:
 
 - `~/Products/project_nemesis/CLAUDE.md`: the product's rules (git identity,
-  no secrets, no push, Codex as a second view, crypto, care). They apply here.
+  no secrets, sessions push to main once tests pass and agents never push,
+  Codex as a second view, crypto, care). They apply here.
 - `~/Products/project_nemesis/docs/plans/exec_plan_paperclip.md`: the living
   plan of this setup, with every decision and Paperclip defect met so far.
   Update it as you go.
@@ -20,7 +21,8 @@ starts in `~/Products/project_nemesis`. Read first:
   Publer window and runs the cron that posts: `queue-day.sh` at 10:00,
   `metrics.mjs` every six hours. It always carries the queue run's
   uncommitted changes (calendar, post marks); never commit or discard them.
-  Commit only your own files there, never push, and check no social job is
+  Commit only your own files there (better: commit on the laptop and push;
+  autodeploy fetches it), never push from there, and check no social job is
   running first.
 - `edomoon-daily.timer` (10:30 Europe/Prague) runs `scripts/daily.sh`: pulls
   the ThinkPad's state, runs `stats.sh` there, wakes stuck reviews, fires
