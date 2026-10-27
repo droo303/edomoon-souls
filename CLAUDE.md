@@ -31,6 +31,8 @@ starts in `~/Products/project_nemesis`. Read first:
 ## Rules for work here
 
 - Commit with `git -c user.name="Petr Kožušník" -c user.email=38697731+droo303@users.noreply.github.com commit`.
+- Push to `main` as you go (owner, 2026-10-28: edomoon-souls is pushed
+  normally too). Never force-push. Agents never push.
 - Before any agent hire is approved: `node scripts/check-hire.mjs <id>`.
   Hires are submitted by the board (`scripts/submit-hire.mjs`).
 - After any change to `config/sandbox.json` or a Paperclip update, rerun
