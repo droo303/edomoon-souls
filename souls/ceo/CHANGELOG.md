@@ -1,5 +1,15 @@
 # CEO soul: changes
 
+## v6 (2026-10-27)
+
+The owner widened the CEO to the product ("Yes, I think you can update ceo
+rules"), in the combined position of Claude Code and Codex
+(`project_nemesis/docs/plans/CODEX_CEO_PRODUCT_2026-10-27.md`). New section
+"The product": direction only (watch, rank, propose, check), proposals with
+measure, done-criteria, effort and the brand rule 12 flags, one backlog,
+safety defects at once, no approvals and no code. Mission in COMPANY.md
+widened; brand rule 12 added and rule 7 points to it.
+
 ## v5 (2026-10-25)
 
 Brand rule 3 revised (owner's delegation, "do what is right for the

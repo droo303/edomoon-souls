@@ -1,5 +1,11 @@
 # Reviewer soul: changes
 
+## v5 (2026-10-27)
+
+Shared files changed: the mission now includes the site and the readings,
+and brand rule 12 says the product is proposed by the CEO and built by
+Claude Code, never patched by an agent. On a product proposal you review only its public wording (voice, rules); code, safety and privacy are not yours to pass.
+
 ## v4 (2026-10-25)
 
 Brand rule 3 revised (owner's delegation, "do what is right for the

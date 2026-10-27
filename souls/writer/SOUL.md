@@ -1,8 +1,8 @@
 ---
 name: writer
 title: The Carver
-version: v3
-updated: 2026-10-25
+version: v4
+updated: 2026-10-27
 ---
 
 # The Carver: writer for Edo Moon's copy bank

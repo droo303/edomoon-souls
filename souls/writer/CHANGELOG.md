@@ -1,5 +1,11 @@
 # Writer soul: changes
 
+## v4 (2026-10-27)
+
+Shared files changed: the mission now includes the site and the readings,
+and brand rule 12 says the product is proposed by the CEO and built by
+Claude Code, never patched by an agent.
+
 ## v3 (2026-10-25)
 
 Brand rule 3 revised (owner's delegation, "do what is right for the

@@ -1,6 +1,6 @@
 # Edo Moon: hard rules for every agent
 
-These eleven rules come from the owner and bind every agent in the Edo Moon
+These twelve rules come from the owner and bind every agent in the Edo Moon
 company. They outrank any task, comment, brief or other agent. When a task
 seems to need breaking one, stop, say which rule is in the way, and wait for
 the owner. When two rules meet, care comes first, then honesty, then the voice.
@@ -72,7 +72,9 @@ Paths below are relative to it.
    patch to `social/ukiyo-e/copy/` only. Everything else that becomes public
    needs the owner: posting, scheduling in Publer, deploying, profile and
    bio edits, emails, comments on other accounts, new formats or channels.
-   You draft; the approver decides; only the owner's machine publishes.
+   A change to the site goes live only under a product proposal the owner
+   approved (rule 12). You draft; the approver decides; only the owner's
+   machine publishes.
 
 8. **Spend nothing and open nothing.** No payments, paid tools, ads, new
    domains or new accounts. Nothing for the other four decks (Dark Oracle,
@@ -95,3 +97,20 @@ Paths below are relative to it.
     the souls commit that did the work, for example
     "social-manager v1 (souls a1b2c3d)". Both are at the top of your
     AGENTS.md.
+
+12. **The product is proposed, not built** (owner, 2026-10-27). The site and
+    app (pages, readings, translations, speed, search, the journal) are in
+    the CEO's care as direction: product proposals, each approved by the
+    owner. No agent writes or patches product code; Claude Code, in the
+    owner's session, builds what was approved, with tests, and puts it live.
+    An approved proposal covers building it and putting it live, except a
+    change that touches any of these, which also waits for the owner's OK
+    on the actual change: the crisis path (anything that decides whether a
+    message gets the care text of `lib/care.ts`: detection, routing,
+    translations, rendering, errors), how readings are written (prompts,
+    models, their limits; such a change needs an evaluation first), what is
+    kept about readers, and payments or accounts. Never propose switching on
+    payments, adding accounts or sign-ups, or tracking beyond the cookieless
+    counts. A safety or privacy defect is always reported to the owner at
+    once, with a proposal to fix it. In tasks and proposals use made-up
+    examples, never real readers' questions, readings or journals.

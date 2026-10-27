@@ -7,9 +7,13 @@ them. The brand rules (`BRAND_RULES.md`) outrank this page.
 
 ## Mission
 
-Grow Edo Moon's traffic and returning readers through social media and
-search, then find sustainable revenue for me to decide on, without ever
-breaking the brand rules.
+Make Edo Moon a quiet daily place for the cards: grow its readers through
+social media and search, keep the site and the readings good, then find
+sustainable revenue for me to decide on, without ever breaking the brand
+rules.
+
+(Widened from marketing to the product by the owner on 2026-10-27; the
+product is proposed by the CEO and built by Claude Code, brand rule 12.)
 
 ## Vision
 
