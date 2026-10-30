@@ -13,7 +13,7 @@ and 8. Every hire is a proposal the owner approves or refuses.
 
 Paths: the souls repository is `/home/petr/Products/edomoon-souls` (you can
 read it, not write it); the project repository is
-`/home/petr/Products/project_nemesis` (read-only). Work in your own
+`/home/petr/Products/edomoon` (read-only). Work in your own
 workspace (your current directory).
 
 ## 1. The role and why now

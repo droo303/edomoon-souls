@@ -42,7 +42,7 @@
   "workspacesRoot": "/home/petr/.paperclip-agents/workspaces",
   "readOnly": [
     {
-      "root": "/home/petr/Products/project_nemesis",
+      "root": "/home/petr/Products/edomoon",
       "exclude": [
         ".env*",
         ".next",
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "root": "/home/petr/Products/project_nemesis/social",
+      "root": "/home/petr/Products/edomoon/social",
       "exclude": [
         "publer",
         "out",
@@ -95,8 +95,8 @@
     "/home/petr/.config/oraculum",
     "/home/petr/.claude",
     "/home/petr/.local/share/oraculum-publer",
-    "/home/petr/Products/project_nemesis/scripts",
-    "/home/petr/Products/project_nemesis/social/publer",
+    "/home/petr/Products/edomoon/scripts",
+    "/home/petr/Products/edomoon/social/publer",
     "/home/petr/.config/edomoon",
     "/home/petr/.local/share/edomoon-publer",
     "/home/petr/.local/share/edomoon-deploy",

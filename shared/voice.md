@@ -1,7 +1,7 @@
 # Edo Moon's voice, and the checks that hold it
 
 The full brief is `social/persona/edo-moon.md` in
-`/home/petr/Products/project_nemesis`, agreed with the owner and reviewed by
+`/home/petr/Products/edomoon`, agreed with the owner and reviewed by
 Codex. Read it before writing anything public. Approved examples are in
 `social/persona/edo-moon.samples.json`; the site's reading voice is
 `themes/ukiyo-e/prompts.json`. This page is a summary, not a substitute.
@@ -39,11 +39,11 @@ samples (`posts[].text`, `replies[].reply` with `kind` and `comment`,
 `standing[]`; `outOfVoice: true` only for the AI answer and care):
 
     D=$PWD/drafts.json                               # in your workspace, not ~
-    cd /home/petr/Products/project_nemesis && node social/check-voice.mjs "$D"
+    cd /home/petr/Products/edomoon && node social/check-voice.mjs "$D"
 
 Bank copy: you cannot edit the bank, so check a copy in your workspace:
 
-    R=/home/petr/Products/project_nemesis; W=$PWD/copycheck
+    R=/home/petr/Products/edomoon; W=$PWD/copycheck
     mkdir -p $W/social/ukiyo-e $W/lib
     cp -r $R/social/{check-copy.mjs,check-voice.mjs,lib,schema} $W/social/
     cp -r $R/social/ukiyo-e/{config.json,copy} $W/social/ukiyo-e/

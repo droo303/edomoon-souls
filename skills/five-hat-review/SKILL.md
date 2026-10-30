@@ -9,7 +9,7 @@ Review the deliverable five times, once per hat, in this order. Each hat
 names the file or command it checked against. You review; you do not
 rewrite. Quote the exact words or lines you find fault with.
 
-Paths are relative to `/home/petr/Products/project_nemesis` (read-only).
+Paths are relative to `/home/petr/Products/edomoon` (read-only).
 Put anything you need to run in your workspace.
 
 ## 1. Brand
@@ -34,7 +34,7 @@ mention of self-harm, abuse or danger gets the fixed care reply and a CARE
 flag, never drafted words). Run the checker and paste its output:
 
     D=$PWD/drafts.json        # the public texts, shaped like edo-moon.samples.json
-    cd /home/petr/Products/project_nemesis && node social/check-voice.mjs "$D"
+    cd /home/petr/Products/edomoon && node social/check-voice.mjs "$D"
 
 For bank copy, run `check-copy.mjs --theme ukiyo-e` on a patched copy, as
 VOICE.md shows. A pass does not clear this hat: the checker reads only the

@@ -6,7 +6,7 @@ record the result below with the persona version and souls commit.
 
 ## Known good: the approved samples
 
-`project_nemesis/social/persona/edo-moon.samples.json` (agreed with the
+`edomoon/social/persona/edo-moon.samples.json` (agreed with the
 owner, reviewed by Codex; `check-voice.mjs` passes 19 of 19). A reviewer
 that sends one of these back for a P0 or P1 is too strict, or has misread
 the brief. Not yet run through the Reviewer (each sample is one run of the

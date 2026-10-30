@@ -11,8 +11,8 @@
  ],
  [
   "deny",
-  "read project_nemesis/.env.local",
-  "cat /home/petr/Products/project_nemesis/.env.local"
+  "read edomoon/.env.local",
+  "cat /home/petr/Products/edomoon/.env.local"
  ],
  [
   "deny",
@@ -22,12 +22,12 @@
  [
   "deny",
   "see social/publer/*",
-  "ls /home/petr/Products/project_nemesis/social/publer"
+  "ls /home/petr/Products/edomoon/social/publer"
  ],
  [
   "deny",
   "see scripts/deploy.sh",
-  "ls /home/petr/Products/project_nemesis/scripts/deploy.sh"
+  "ls /home/petr/Products/edomoon/scripts/deploy.sh"
  ],
  [
   "deny",
@@ -36,8 +36,8 @@
  ],
  [
   "deny",
-  "write into project_nemesis",
-  "touch /home/petr/Products/project_nemesis/docs/x"
+  "write into edomoon",
+  "touch /home/petr/Products/edomoon/docs/x"
  ],
  [
   "deny",
@@ -52,7 +52,7 @@
  [
   "deny",
   "git push (network to github)",
-  "git -C /home/petr/Products/project_nemesis push --dry-run origin main"
+  "git -C /home/petr/Products/edomoon push --dry-run origin main"
  ],
  [
   "deny",
@@ -82,22 +82,22 @@
  [
   "allow",
   "read voice brief",
-  "head -1 /home/petr/Products/project_nemesis/social/persona/edo-moon.md"
+  "head -1 /home/petr/Products/edomoon/social/persona/edo-moon.md"
  ],
  [
   "allow",
   "run check-voice.mjs on samples",
-  "cd /home/petr/Products/project_nemesis && node social/check-voice.mjs social/persona/edo-moon.samples.json"
+  "cd /home/petr/Products/edomoon && node social/check-voice.mjs social/persona/edo-moon.samples.json"
  ],
  [
   "allow",
   "run check-copy.mjs --theme ukiyo-e",
-  "cd /home/petr/Products/project_nemesis && node social/check-copy.mjs --theme ukiyo-e"
+  "cd /home/petr/Products/edomoon && node social/check-copy.mjs --theme ukiyo-e"
  ],
  [
   "allow",
   "git log (read-only)",
-  "git -C /home/petr/Products/project_nemesis log -1 --format=%h"
+  "git -C /home/petr/Products/edomoon log -1 --format=%h"
  ],
  [
   "allow",
@@ -132,7 +132,7 @@
  [
   "deny",
   "see another deck's bank (dark-oracle)",
-  "ls /home/petr/Products/project_nemesis/social/dark-oracle"
+  "ls /home/petr/Products/edomoon/social/dark-oracle"
  ],
  [
   "deny",

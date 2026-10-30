@@ -2,12 +2,12 @@
 
 This repository runs the AI agency that markets Edo Moon (Paperclip, on this
 laptop at http://127.0.0.1:3100). Start agency sessions here; product work
-starts in `~/Products/project_nemesis`. Read first:
+starts in `~/Products/edomoon`. Read first:
 
-- `~/Products/project_nemesis/CLAUDE.md`: the product's rules (git identity,
+- `~/Products/edomoon/CLAUDE.md`: the product's rules (git identity,
   no secrets, sessions push to main once tests pass and agents never push,
   Codex as a second view, crypto, care). They apply here.
-- `~/Products/project_nemesis/docs/plans/exec_plan_paperclip.md`: the living
+- `~/Products/edomoon/docs/plans/exec_plan_paperclip.md`: the living
   plan of this setup, with every decision and Paperclip defect met so far.
   Update it as you go.
 - `README.md` here: souls, versions, sync, hiring, approvals, the sandbox.

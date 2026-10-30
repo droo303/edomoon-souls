@@ -3,11 +3,11 @@
 The personas ("souls") of the AI agents that market Edo Moon
 (https://edomoon.com), run in Paperclip on the owner's computer
 (http://127.0.0.1:3100, company "Edo Moon"). The plan this repository serves
-is `~/Products/project_nemesis/docs/plans/exec_plan_paperclip.md`.
+is `~/Products/edomoon/docs/plans/exec_plan_paperclip.md`.
 
     shared/brand-rules.md   the eleven hard rules; written inline into every agent's AGENTS.md
     shared/company.md       mission, vision and values (owner-approved, EDO-9); written to every agent as COMPANY.md
-    shared/voice.md         the voice in brief, pointing to project_nemesis/social/persona/edo-moon.md, and the checks
+    shared/voice.md         the voice in brief, pointing to edomoon/social/persona/edo-moon.md, and the checks
     souls/<role>/           SOUL.md (the persona, versioned), AGENTS.md (short template), CHANGELOG.md
     skills/                 company skills, imported into Paperclip's library
     evals/                  fixed test tasks per role
@@ -62,12 +62,12 @@ passes it; everything else public is approved by the owner. Tasks carry
 ## The sandbox
 
 `config/sandbox.json` holds rules, not a frozen list: which folders agents
-may read (project_nemesis without `.env*`, `scripts/`, `social/publer/` and
+may read (edomoon without `.env*`, `scripts/`, `social/publer/` and
 the other four decks; parts of this repository), which hosts they may reach,
 and the Bubblewrap wrapper that works around Paperclip's merged-/usr bug
 (`scripts/bwrap-merged-usr`, installed at
 `~/.paperclip-agents/bin/bwrap-merged-usr`). After any change to it, a
-Paperclip update, or a new top-level entry in project_nemesis:
+Paperclip update, or a new top-level entry in edomoon:
 
     ~/.local/opt/node-v24.22.1-linux-x64/bin/node sandbox-test/sandbox-probe.mjs --fake-publer
 
@@ -77,5 +77,5 @@ Every line must say PASS. Then rerun `apply-sandbox.mjs` for each agent.
 
 None here. The Paperclip API address and key, if one is ever needed, go in
 `.env` at the root (gitignored, never mounted for agents).
-`.githooks/pre-commit` (from project_nemesis, plus Paperclip's `pcp_` and
+`.githooks/pre-commit` (from edomoon, plus Paperclip's `pcp_` and
 `pcfc_` keys) refuses env files and anything that looks like a key.

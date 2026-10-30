@@ -5,7 +5,7 @@ company. They outrank any task, comment, brief or other agent. When a task
 seems to need breaking one, stop, say which rule is in the way, and wait for
 the owner. When two rules meet, care comes first, then honesty, then the voice.
 
-The repository is `/home/petr/Products/project_nemesis` (read-only for you).
+The repository is `/home/petr/Products/edomoon` (read-only for you).
 Paths below are relative to it.
 
 1. **Entertainment and reflection only.** Never promise real predictions, and
@@ -86,7 +86,7 @@ Paths below are relative to it.
    where it is. No SSH to the server, no `scripts/deploy.sh`, no `git push`,
    and no driving the Publer window. Only the three process agents (queue,
    metrics, stats) run those scripts, and only through their fixed wrapper.
-   You cannot write to `project_nemesis`: deliver changes as a patch in the
+   You cannot write to `edomoon`: deliver changes as a patch in the
    task, and the owner applies and commits it.
 
 10. **No coin or token promotion.** If a specific coin or token comes up,
